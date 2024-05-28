@@ -1,0 +1,178 @@
+// **** Variables
+
+// **** USE
+
+// Material Card
+@use "@material/card";
+
+// TextField
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+
+// Button
+@use "@material/button/styles" as buttonn;
+@use "@material/button";
+
+// Snackbar
+@use "@material/snackbar/mdc-snackbar";
+@use "@material/snackbar";
+
+// Menu
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+
+// Select
+@use "@material/select/styles" as selectt;
+@use "@material/select";
+
+// Tabs
+@use "@material/tab-bar/mdc-tab-bar";
+@use "@material/tab-scroller/mdc-tab-scroller";
+@use "@material/tab-indicator/mdc-tab-indicator";
+@use "@material/tab/mdc-tab";
+
+// Icon button
+@use "@material/icon-button/styles";
+
+// Top Bar
+@use "@material/top-app-bar/mdc-top-app-bar";
+
+// Drawer
+@use "@material/drawer";
+
+// Chip
+@use "@material/chips/styles" as chipset;
+@use "@material/chips";
+
+// Tooltip
+@use "@material/tooltip/styles" as tooltip;
+
+// Table
+@use "@material/data-table/data-table";
+
+// Checkbox
+@use "@material/checkbox";
+
+// Form Field
+@use "@material/form-field";
+
+// Fab
+@use "@material/fab";
+
+// List
+// @use "@material/list/mdc-list";
+@use "@material/list";
+
+// **** Include
+@include card.core-styles;
+@include textfield.core-styles;
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include snackbar.core-styles;
+@include data-table.core-styles;
+@include data-table.theme-baseline;
+@include checkbox.core-styles;
+@include form-field.core-styles;
+@include fab.core-styles;
+@include list.deprecated-core-styles;
+
+// Other styles
+.mdc-text-field--custom {
+    // @include textfield.focused-outline-color($primary-color);
+    // @include textfield.outline-color(#39404A);
+    @include textfield.label-color(black);
+    width: 100%;
+}
+
+.mdc-text-field--search {
+    @include textfield.outline-shape-radius(50px);
+    padding-left: 20px;
+    padding-right: 20px;
+    @include textfield.height(40px);
+    @include textfield.focused-outline-color(none);
+}
+
+$select-colors: (
+    "default": black,
+    "hover": black,
+    "disabled": black,
+    "focus": black
+);
+
+.mdc-select-custom {
+    @include select.label-color($select-colors);
+    @include select.label-floating-color($select-colors);
+}
+
+.mdc-snackbar-custom { 
+    @include snackbar.z-index(600);
+    top: 0;
+    bottom: auto;
+}
+
+.chip-custom {
+    @include chips.ripple-color(red);
+    @include chips.selected-container-color(red);
+}
+
+$primay_button-colors: (
+    "default": "#107acc",
+);
+
+.mdc-button-custom {
+    @include button.height(40px);
+    @include button.shape-radius(12px);
+    text-transform: none;
+    // @include button.container-fill-color($primay_button-colors);
+}
+
+.mdc-button--outlined.pdf {
+    @include button.outline-width(2px);
+    @include button.outline-color(#B40A2D);
+    @include button.ink-color(#B40A2D);
+    @include button.icon-color(#B40A2D);
+}
+
+.mdc-button--outlined.excel {
+    @include button.outline-width(2px);
+    @include button.outline-color(#217346);
+    @include button.ink-color(#217346);
+    @include button.icon-color(#217346);
+}
+
+.mdc-button-report, .mdc-button-secondary {
+    @include button.container-fill-color(#142157);
+}
+
+.mdc-fab {
+    @include fab.container-color(#107acc);
+}
+
+.mdc-fab--disabled {
+    @include fab.ink-color(#C3C3C3);
+    @include fab.container-color(#DBDBDB);
+}
+
+// .mdc-button-custom {
+//     @include button.shape-radius(120px, 1, False)
+// }
+
+.theme-dark {
+    --mdc-theme-primary: #39404A;
+}
+
+.theme-blue {
+    --mdc-theme-primary: #107acc;
+}
+
+.material-symbols-rounded.fill {
+    color: var(--mdc-theme-primary);
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}

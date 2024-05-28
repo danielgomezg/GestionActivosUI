@@ -1,0 +1,358 @@
+.title {
+    font-size: 28px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.card-container {
+    padding: 16px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-actions {
+    gap: 8px;
+    display: flex;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        margin-top: 10px;    
+    }
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    // margin-top: 30px;
+
+    @media only screen and (max-width: 600px) {
+        // display: block;
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-col-span-2 {
+    grid-column: span 2;
+    @media only screen and (max-width: 600px) {
+        // display: block;
+        grid-column: 1;
+    }
+}
+
+.grid-col-2 {
+    grid-column: 2;
+    @media only screen and (max-width: 600px) {
+        // display: block;
+        grid-column: 1;
+    }
+}
+
+.img-container {
+    height: 100%;
+    margin-right: 20px;
+    img {
+        height: 100%;
+    }
+    @media only screen and (max-width: 600px) {
+        height: auto;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 80px;
+        }
+    }
+}
+
+.responsive-table {
+    
+    overflow-x: auto;
+    display: block;
+    @media only screen and (max-width: 600px) {
+        // display: block;
+        width: 100%;
+    }
+}
+
+.content-description {
+    grid-column: 2;
+    grid-row: 1 / 3;
+
+    @media only screen and (max-width: 600px) {
+        // display: block;
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+}
+
+.grid-col-span-1 {
+    grid-column: 1;
+}
+
+h4, h5 {
+    margin: 0;
+    font-weight: 400;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    @media only screen and (max-width: 600px) {
+        // display: block;
+        flex-direction: column;
+    }
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.flex-end {
+    align-items: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.body-content {
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.grid-columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+    @media only screen and (max-width: 600px) {
+        // display: block;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.grid-columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+    @media only screen and (max-width: 600px) {
+        // display: block;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.image-list {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 600px) {
+        justify-content: space-evenly;
+    }
+}
+
+.article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* display: block; */
+    /* border-radius: 3px; */
+}
+
+.content-image {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    overflow: visible;
+    /* border: 1px solid #ccc; */
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.gap-8 {
+    gap: 8px;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-18 {
+    margin-top: 18px;
+}
+
+p {
+    margin: 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// Media queries para mobile class .header-content display: flex column
+@media only screen and (max-width: 600px) {
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: normal;
+    }
+}
+
+.account-username {
+    text-align: right;
+    @media only screen and (max-width: 600px) {
+        // display: block;
+        display: none;
+    }
+}
+
+.account-username__secondary {
+    display: none;
+    @media only screen and (max-width: 600px) {
+        // display: block;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .mobile-fixed{
+        bottom: 0px;
+        width: 100%;
+        position: sticky;
+        padding-bottom: 5px;
+        background-color: white;
+    }
+}
+
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
+.main {
+    position: relative;
+    // top: 64px;
+}
+
+.mdc-drawer { 
+    top: 64px;
+}
+
+.mdc-drawer {
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .mobile-only {
+        display: block;
+    }
+    
+    .desktop-only {
+        display: none;
+    }
+
+    .mdc-drawer {
+        width: 100%;
+        top: 56px;	
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .mdc-drawer--size {
+        width: 100%;	
+    }
+}
+
+// Media para pantallas mediaanas
+@media only screen and (min-width: 600px) and (max-width: 1800px) {
+    .mdc-drawer--size {
+        width: 80px;
+    }
+}
+
+.mdc-list-item--drawer {
+    padding: 9px 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.main-content {
+    max-width: 1230px;
+    margin: 0px auto;
+    padding: 0 16px;
+}
+
+.side-sheet {
+    position: fixed;
+    right: -100%; /* -250px; Ancho del side sheet */
+    top: 0;
+    height: 100vh;
+    width: 40%;
+    background-color: #FFFFFF;
+    border-radius: 16px 0 0 16px ;
+    transition: 0.5s; /* Agrega transición para un deslizamiento suave */
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: 600px) and (max-width: 1800px) {
+        width: 55%;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1800px) {
+    .mdc-list-item--drawer {
+        padding: 6px 16px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        box-sizing: border-box;
+        /* aspect-ratio: 1 / 1; */
+        /* height: 60px; */
+        flex-direction: column;
+        /* text-align: center; */
+        font-size: 12px;
+        /* width: 100%; */	
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1410px) {
+    .main-content {
+        margin: 0px 80px;
+    }
+}
